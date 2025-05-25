@@ -7,6 +7,8 @@ Este projeto visa extrair os tickers de todos os BDRs (Brazilian Depositary Rece
 </br>
 
 ## About Data
+### [investnews.com.br](https://investnews.com.br)
+
 - Fonte: Site da B3 (Bolsa de Valores brasileira).
 - Tipo de dados: HTML da página contendo a lista de BDRs.
 
@@ -14,9 +16,25 @@ Este projeto visa extrair os tickers de todos os BDRs (Brazilian Depositary Rece
 
 </br>
 
+## About Metrics
+- BDRs são "réplicas" de ações de empresas estrangeiras, negociadas na bolsa brasileira (B3)
+- Permitem que investidores brasileiros invistam em empresas estrangeiras sem precisar abrir conta fora do país, facilitando a diversificação internacional da carteira de investimentos
+
+```mermaid
+flowchart LR
+    A[instituição financeira compra ações de uma empresa internacional] --> B[a instituição emite BDRs dessa empresa no Brasil]
+    B --> C[investidores compram os BDRs na B3]
+    C --> D[investidores investem indiretamente nessa empresa, com reais, pela bolsa brasileira]
+```
+
+> [!WARNING]
+> Ao comprar um BDR, você não está comprando a ação diretamente, mas sim um certificado que representa ela
+
+</br>
+
 ## Data Preparation
-- Utilização de bibliotecas como BeautifulSoup para parsing do HTML.
-- Extração das informações relevantes (tickers, nomes das empresas).
+- Utilização de bibliotecas como BeautifulSoup para parsing do HTML
+- Extração das informações relevantes (tickers, nomes das empresas)
 
 </br>
 
